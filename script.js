@@ -6,7 +6,7 @@ document.querySelector(".search").addEventListener("submit", async (event) => {
     status("loading");
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(
       cityName
-    )}&appid=01ce19534bd846e30860fb32c4ce8bba&units=metric`;
+    )}&appid={Api key}&units=metric`;
 
     let results = await fetch(url);
     let json = await results.json();
